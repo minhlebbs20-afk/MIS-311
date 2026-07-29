@@ -16,17 +16,17 @@ I. Project Overview
 
 II. Dataset Structure
 
-   The original raw dataset (`01_Cost of Living.xlsx`) contains 201 rows and 5 primary feature columns:
+The original raw dataset (`01_Cost of Living.xlsx`) contains 201 rows and 5 primary feature columns:
 
-   •	Country (Categorical (Text)): The name of the country where the data was recorded.
+•	Country (Categorical (Text)): The name of the country where the data was recorded.
 
-   •	Region (Categorical (Text)): The geographical region to which the country belongs 
+•	Region (Categorical (Text)): The geographical region to which the country belongs 
 
-   •	Year (Numerical (Integer)): The year when the data was recorded (2000 – 2023).
+•	Year (Numerical (Integer)): The year when the data was recorded (2000 – 2023).
 
-   •	Average_Monthly_Income (Numerical (Decimal)): The average monthly income of individuals in USD.
+•	Average_Monthly_Income (Numerical (Decimal)): The average monthly income of individuals in USD.
 
-   •	Cost_of_Living (Numerical (Decimal)): The average monthly cost of living in USD, including essentials like housing, food, and utilities.
+•	Cost_of_Living (Numerical (Decimal)): The average monthly cost of living in USD, including essentials like housing, food, and utilities.
 
 III. Data Cleaning Pipeline
 
@@ -70,7 +70,7 @@ V. Key Insights
 
    Insight 1: Tight Global Disposable Income Margin
   
-     Global mean monthly income ($\$4,244.19$) exceeds mean monthly living expenses ($\$3,705.13$) by approximately $14.5\%$. However, large standard deviations in both income ($2,116.64) and living costs ($\$1,982.22$) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly $100\%$ of earnings.
+   Global mean monthly income ($\$4,244.19$) exceeds mean monthly living expenses ($\$3,705.13$) by approximately $14.5\%$. However, large standard deviations in both income ($2,116.64) and living costs ($\$1,982.22$) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly $100\%$ of earnings.
 
    Insight 2: Regional Disparities in Living Affordability
 
