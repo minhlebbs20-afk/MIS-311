@@ -64,7 +64,7 @@ IV. Descriptive Statistics
 
    Summary metrics computed on the cleaned dataset ($N = 199$):
 
-
+![Mark down]( )
 
 V. Key Insights
 
