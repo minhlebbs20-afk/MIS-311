@@ -176,5 +176,5 @@ VI. How to Reproduce Analysis in Excel (macOS / Windows)
 
    7. Make Scatter Chart
 
-   Highlight all rows including both columns of Average Monthly Income and Cost of Living -> Click Insert and choose Scatter Chart in Recommended Charts
+      Highlight all rows including both columns of Average Monthly Income and Cost of Living -> Click Insert and choose Scatter Chart in Recommended Charts
 
