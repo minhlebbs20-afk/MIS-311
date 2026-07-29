@@ -62,21 +62,21 @@ III. Data Cleaning Pipeline
 
 IV. Descriptive Statistics
 
-   Summary metrics computed on the cleaned dataset ($N = 199$):
+   Summary metrics computed on the cleaned dataset (N = 199):
 
-![Mark down]( )
+<img width="405" height="213" alt="Descriptive Statistics" src="https://github.com/user-attachments/assets/6a5155a4-7bc6-4b01-8c27-30d811661018" />
 
 V. Key Insights
 
    Insight 1: Tight Global Disposable Income Margin
   
-   Global mean monthly income ($\$4,244.19$) exceeds mean monthly living expenses ($\$3,705.13$) by approximately $14.5\%$. However, large standard deviations in both income ($2,116.64) and living costs ($\$1,982.22$) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly $100\%$ of earnings.
+   Global mean monthly income ($4,244.19) exceeds mean monthly living expenses ($3,705.13) by approximately $14.5. However, large standard deviations in both income ($2,116.64) and living costs ($1,982.22) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly $100 of earnings.
 
    Insight 2: Regional Disparities in Living Affordability
 
-   Europe and Oceania maintain healthier disposable buffers, with average incomes (Europe: $\$4,477.26$, Oceania: $\$4,535.57$) comfortably above regional living costs.
+   Europe and Oceania maintain healthier disposable buffers, with average incomes (Europe: $4,477.26, Oceania: $4,535.57$) comfortably above regional living costs.
 
-   North America exhibits a much tighter equilibrium between average monthly income ($\$3,774.13$) and cost of living ($\$3,750.07$), indicating higher financial strain relative to earnings in these sample records.
+   North America exhibits a much tighter equilibrium between average monthly income ($3,774.13$) and cost of living ($3,750.07), indicating higher financial strain relative to earnings in these sample records.
 
 VI. How to Reproduce Analysis in Excel (macOS / Windows)
 
