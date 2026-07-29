@@ -62,7 +62,33 @@ III. Data Cleaning Pipeline
 
 IV. Descriptive Statistics
 
-   Summary metrics computed on the cleaned dataset (N = 199):
+   The table presents the descriptive statistics for two variables: Average Monthly Income (Average_Monthly_Income) and Cost of Living (Cost_of_Living), with a sample size of N = 199. 
+   
+   Average Monthly Income (Average_Monthly_Income)
+   
+   Sample Size (Count): $199$ observations
+   
+   Central Tendency:
+   
+   Mean: $4,244.19
+   
+   Median: $4,266.46
+   
+   Mode: $4,266.46
+   
+   Interpretation: The mean and median are nearly identical, indicating a balanced distribution around the central value of $4,244.19.
+   
+   Dispersion / Variability:
+   
+   Standard Deviation: $2,116.64
+   
+   Sample Variance: $4,480,156.55
+   
+   Standard Error: $150.04
+   
+   Range: $7,441.82 (Minimum = $534.74, Maximum = $7,976.56)
+   
+   Interpretation: The large standard deviation indicates significant variance in income levels among the surveyed individuals.Distribution Shape:Skewness: $0.06$ (Close to $0$, indicating a symmetric distribution with a negligible right-skew).Kurtosis: $-1.17$ (Negative kurtosis indicates a platykurtic distribution—flatter peak and lighter tails than a normal distribution).2. Cost of Living (Cost_of_Living)Sample Size (Count): $199$ observationsCentral Tendency:Mean: $3,705.13$Median: $3,688.09$Mode: N/A (No repeated values identified)Interpretation: The average cost of living is $3,705.13$, closely aligning with the median value of $3,688.09$.Dispersion / Variability:Standard Deviation: $1,982.22$Sample Variance: $3,929,182.86$Standard Error: $140.52$Range: $6,516.53$ (Minimum = $464.49$, Maximum = $6,981.02$)Distribution Shape:Skewness: $-0.04$ (Nearly symmetric, negligible left-skew).Kurtosis: $-1.27$ (Platykurtic distribution with a flat top).3. Summary & Comparative InsightsMonthly Net Savings: Comparing the mean income ($4,244.19$) to the mean cost of living ($3,705.13$) yields an average monthly surplus of $539.06$ per individual.Data Symmetry: Both variables exhibit skewness values near zero, indicating normal-like symmetry. However, the negative kurtosis values ($\approx -1.2$) show that observations are fairly uniformly spread out across the range rather than clustered tightly around the mean.
 
 <img width="405" height="213" alt="Descriptive Statistics" src="https://github.com/user-attachments/assets/6a5155a4-7bc6-4b01-8c27-30d811661018" />
 
