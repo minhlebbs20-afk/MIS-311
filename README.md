@@ -172,4 +172,9 @@ VI. How to Reproduce Analysis in Excel (macOS / Windows)
  
       Click Close & Load to push the clean table to a new worksheet.
 
-      Go to Data -> Data Analysis -> Select Descriptive Statistics with to export summary statistics with Label in first row 
+      Go to Data -> Data Analysis -> Select Descriptive Statistics with Input Range ($C$1:$D$200) -> Click Label in first row and Summary Statistics (95%) -> Click Ok
+
+   7. Make Scatter Chart
+
+   Highlight all rows including both columns of Average Monthly Income and Cost of Living -> Click Insert and choose Scatter Chart in Recommended Charts
+
