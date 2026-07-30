@@ -58,7 +58,11 @@ III. Data Cleaning Pipeline
 
       Mexico (2006): Identified by a specific cost of living threshold of 4219.26.
 
-      Instead of using statistical imputation (such as mean/median filling or linear interpolation), the missing fields were deterministically restored via primary source tracking to ensure 100% data integrity. 
+      Instead of using statistical imputation (such as mean/median filling or linear interpolation), the missing fields were deterministically restored via primary source tracking to ensure 100% data integrity.
+
+      Australia (2012) with Cost_of_Living (4692.15), fill 3641.94 into Average_Monthly_Income.
+      
+      Mexico (2006) with Cost_of_Living (4219.26), fill 6124.70 into Average_Monthly_Income.
 
       The reference values were verified and cross-referenced from the global economic benchmark dataset "Cost of Living and Income Extended" (compiled from historical records of Numbeo and The World Bank macro indicators).
 
@@ -70,7 +74,7 @@ IV. Descriptive Statistics
    
    1. Average Monthly Income (Average_Monthly_Income)
    
-   Sample Size (Count): $199 observations
+   Sample Size (Count): 199 observations
    
    Central Tendency:
    
@@ -80,15 +84,15 @@ IV. Descriptive Statistics
    
       Mode: N/A (No repeated values identified)
    
-      Interpretation: The mean and median are nearly identical, indicating a balanced distribution around the central value of $4,244.19.
+      Interpretation: The mean and median are nearly identical, indicating a balanced distribution around the central value of $4,250.39.
    
    Dispersion / Variability:
    
-      Standard Deviation: $2,116.64
+      Standard Deviation: $2,121.27
    
-      Sample Variance: $4,480,156.55
+      Sample Variance: $4,499,804.91
    
-      Standard Error: $150.04
+      Standard Error: $150.37
    
       Range: $7,441.82 (Minimum = $534.74, Maximum = $7,976.56)
    
@@ -118,11 +122,11 @@ IV. Descriptive Statistics
    
       Range: $6,516.53 (Minimum = $464.49, Maximum = $6,981.02)
    
-<img width="405" height="213" alt="Descriptive Statistics" src="https://github.com/user-attachments/assets/6a5155a4-7bc6-4b01-8c27-30d811661018" />
+<img width="457" height="231" alt="Ảnh màn hình 2026-07-31 lúc 00 00 55" src="https://github.com/user-attachments/assets/c2dda717-8072-488b-a966-91cad0e3b91e" />
 
    3. Scatter Plot Findings
 
-      <img width="691" height="461" alt="Scatter Chart" src="https://github.com/user-attachments/assets/b5f97f03-78db-47eb-a9a5-2eeeab407522" />
+<img width="665" height="488" alt="Ảnh màn hình 2026-07-31 lúc 00 01 07" src="https://github.com/user-attachments/assets/07995112-1115-49c4-b318-1334f091e588" />
 
    Looking at the scatter chart:
 
@@ -136,14 +140,27 @@ V. Key Insights
 
    Insight 1: Tight Global Disposable Income Margin
   
-   Global mean monthly income ($4,244.19) exceeds mean monthly living expenses ($3,705.13) by approximately $539.06. However, large standard deviations in both income ($2,116.64) and living costs ($1,982.22) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly 100% of earnings.
+   Global mean monthly income ($4,250.39) exceeds mean monthly living expenses ($3,705.13) by approximately $545.26. However, large standard deviations in both income ($2,121.27) and living costs ($1,982.22) reveal that a significant portion of observations sit near or below parity, where essential expenses absorb nearly 100% of earnings.
 
    Insight 2: Regional Disparities in Living Affordability
 
-   Europe and Oceania maintain healthier disposable buffers, with average incomes (Europe: $4,477.26, Oceania: $4,535.57$) comfortably above regional living costs. 
-   
-   North America exhibits a much tighter equilibrium between average monthly income ($3,774.13$) and cost of living ($3,750.07), indicating higher financial strain relative to earnings in these sample records.
+  Europe and Oceania have healthier disposable buffers, as their average incomes are considerably above the regional living costs. In contrast, North America demonstrates a significantly tighter equilibrium between the average monthly income and cost of living, which suggests that there is a greater degree of financial strain in relation to earnings in these sample recordings.
 
+   Insight 3: Regional Financial Buffers
+
+   Cash Flow Retention: Europe Retains Europe continues to be the world’s strongest region for financial balance. The significant difference between the highest total income and optimal living costs has led to a big cash surplus (Balance) in this region, which is more than any other location.
+
+   Cost of Living Pressure Straining North America: North America is experiencing a very corrosive financial equilibrium. The total revenue earned is huge, similar to Europe and Asia, but the rising high living costs have eaten into the real surplus (Balance) to a tiny nominal level, virtually nothing.
+
+   Asia Drives Big Wealth Build-Up: Asia is putting itself on the map as a vibrant, fast-changing financial economy. The region has very high domestic living expenditures but a significant total surplus (Balance), the second highest in the world after Europe.
+
+   Ability to keep cash in smaller markets Africa, South America and Oceania are on a lesser scale of cash flow due to the distinctive characteristics of their local economies. But the financial buffer (balance) of these three regions is strikingly robust and similar, which shows how well households regulate their spending to conserve cash.
+
+<img width="688" height="467" alt="Ảnh màn hình 2026-07-31 lúc 00 01 17" src="https://github.com/user-attachments/assets/9e53a364-9720-4946-86d7-bb9fdb2c6a6a" />
+
+<img width="464" height="169" alt="Ảnh màn hình 2026-07-31 lúc 00 01 23" src="https://github.com/user-attachments/assets/7113bc3d-d0d5-43e6-ba1f-7d37d7777a7e" />
+
+   
 VI. How to Reproduce Analysis in Excel (macOS / Windows)
 
    1. Load Raw File: Open `01_Cost of Living.xlsx` in Microsoft Excel.
@@ -152,13 +169,17 @@ VI. How to Reproduce Analysis in Excel (macOS / Windows)
 
       Select dataset range  -> Click Data tab -> Click Get Data (Power Query) -> From Table/Range.
 
-   4. Execute Cleaning Pipeline:**
+   3. Execute Cleaning Pipeline:
 
-      Select all columns -> Right-click -> Remove Duplicates.
-
-      Fill blank `Region` cells for Mexico with `North America`.
-
-      For `Average_Monthly_Income`, find `null` values -> Replace with `4266.46`.
+     Remove Duplicates: Select all columns → Navigate to the Data tab → Click Remove Duplicates to eliminate any redundant records.
+     
+     Fill Missing Metadata: Locate the missing row entries for Mexico (2006) → Input North America respectively into the blank cells of the Region column.
+     
+     Deterministic Income Restoration: Scan the Average_Monthly_Income column for missing (null) values and restore their precise historical figures mapped to their specific cost anchors:
+     
+        Input 3641.94 for the record with a cost of living of 4692.15 (Australia).
+     
+        Input 6124.70 for the record with a cost of living of 4219.26 (Mexico).
 
    6. Generate Output & Statistics:
  
@@ -170,3 +191,22 @@ VI. How to Reproduce Analysis in Excel (macOS / Windows)
 
       Highlight all rows including both columns of Average Monthly Income and Cost of Living -> Click Insert and choose Scatter Chart in Recommended Charts
 
+   8. Steps to Create the Balance Column in Excel:
+
+      Label New Column: Navigate to the first cell of the next empty column (e.g., cell F1) and type the header Balance.
+
+      Enter Financial Formula: In the cell directly below the header (cell F2), input the calculation formula: =C2-D2 (where C2 represents Income and D2 represents Cost of Living).
+
+      Apply Across Dataset: Hover your mouse over the bottom-right corner of cell F2 until a black plus sign (+) appears, then double-click to automatically fill the formula down all 199 rows.
+
+   9. Steps to create a PivotTable & PivotChart in Excel:
+
+      Select the data range: Select the entire clean data table (including the header row from the first row).
+
+      Initialize the tool: Go to the Insert tab → Click on PivotChart (or select the PivotTable & PivotChart option).
+
+      Set the analysis axis: In the right-hand pane, drag the Region field and drop it into the Axis (Categories) box to create the horizontal axis.
+
+      Add financial indicators: Drag the Average_Monthly_Income, Cost_of_Living, and Balance fields into the Values ​​box.
+
+      Change the calculation function: Right-click on each field in the Values ​​box → Select Value Field Settings → Change the default from Count or Average to Sum to accurately match the 3-column chart.
